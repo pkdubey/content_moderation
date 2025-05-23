@@ -3,6 +3,10 @@
 ![Python](https://img.shields.io/badge/Python-3.13+-blue.svg)
 ![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-orange.svg)
 
+## 📖 Description
+
+A powerful, AI-driven content moderation system built with Python and Hugging Face Transformers. This system leverages both rule-based filtering and machine learning-based classification to automatically detect and block toxic, profane, or politically sensitive content in user-generated text. Designed for developers, communities, and organizations that need scalable and customizable content moderation solutions to maintain positive and safe online environments.
+
 ## 📌 Project Overview
 
 A sophisticated content moderation system that uses multiple layers of filtering and AI-based classification to detect and filter inappropriate content. The system combines:

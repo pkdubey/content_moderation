@@ -256,11 +256,13 @@ Please ensure:
 ## 📧 Contact
 
 For questions and support, please open an issue in the repository.
-| ----------------- | ----- |
-| Profanity Recall | 99.2% |
-| Political Recall | 97.5% |
+
+| Metric            | Value |
+| :---------------- | :---- |
+| Profanity Recall  | 99.2% |
+| Political Recall  | 97.5% |
 | Toxicity Accuracy | 92.1% |
-| False Positives | 1.8% |
+| False Positives   | 1.8%  |
 
 ## 🌟 Why This Solution?
 

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Content Moderation Demo</title>
+</head>
+<body>
+    <h1>Content Moderation Demo</h1>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="text" rows="5" cols="60" placeholder="Enter text to moderate..."></textarea><br>
+        <button type="submit">Check</button>
+    </form>
+    {% if result %}
+        <h2>Result:</h2>
+        <pre>{{ result }}</pre>
+    {% endif %}
+</body>
+</html>

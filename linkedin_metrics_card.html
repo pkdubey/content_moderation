@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0f172a; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Segoe UI', sans-serif; }
+  .card { width: 680px; padding: 52px 48px; background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); border: 1px solid #1e293b; border-radius: 20px; box-shadow: 0 0 80px rgba(56,189,248,0.08); }
+  .badge { display: inline-block; background: #0c4a6e; color: #38bdf8; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; margin-bottom: 20px; }
+  h1 { color: #f1f5f9; font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+  h1 span { color: #38bdf8; }
+  .sub { color: #64748b; font-size: 13px; margin-bottom: 44px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px; }
+  .metric { background: #1e293b; border-radius: 14px; padding: 24px 20px; border: 1px solid #334155; position: relative; overflow: hidden; }
+  .metric::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  .m1::before { background: linear-gradient(90deg, #ef4444, #f97316); }
+  .m2::before { background: linear-gradient(90deg, #f59e0b, #eab308); }
+  .m3::before { background: linear-gradient(90deg, #a78bfa, #818cf8); }
+  .m4::before { background: linear-gradient(90deg, #22c55e, #10b981); }
+  .metric .value { font-size: 42px; font-weight: 800; margin-bottom: 4px; }
+  .m1 .value { color: #f87171; }
+  .m2 .value { color: #fbbf24; }
+  .m3 .value { color: #a78bfa; }
+  .m4 .value { color: #4ade80; }
+  .metric .name { color: #94a3b8; font-size: 13px; font-weight: 500; }
+  .metric .desc { color: #475569; font-size: 11px; margin-top: 4px; }
+  .footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #1e293b; padding-top: 24px; }
+  .stack { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tag { background: #1e293b; color: #64748b; font-size: 11px; padding: 4px 10px; border-radius: 6px; border: 1px solid #334155; }
+  .model { color: #475569; font-size: 12px; }
+  .model span { color: #38bdf8; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="badge">🛡️ Model Performance</div>
+  <h1>Content <span>Moderation</span> System</h1>
+  <p class="sub">Fine-tuned DistilBERT · Multi-layer filtering · Real-time classification</p>
+  <div class="grid">
+    <div class="metric m1">
+      <div class="value">99.2%</div>
+      <div class="name">Profanity Recall</div>
+      <div class="desc">Banned word detection rate</div>
+    </div>
+    <div class="metric m2">
+      <div class="value">97.5%</div>
+      <div class="name">Political Recall</div>
+      <div class="desc">Sensitive term detection rate</div>
+    </div>
+    <div class="metric m3">
+      <div class="value">92.1%</div>
+      <div class="name">Toxicity Accuracy</div>
+      <div class="desc">AI classification accuracy</div>
+    </div>
+    <div class="metric m4">
+      <div class="value">1.8%</div>
+      <div class="name">False Positives</div>
+      <div class="desc">Clean content wrongly blocked</div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="stack">
+      <span class="tag">Python</span>
+      <span class="tag">PyTorch</span>
+      <span class="tag">HuggingFace</span>
+      <span class="tag">scikit-learn</span>
+    </div>
+    <div class="model">Model: <span>DistilBERT</span></div>
+  </div>
+</div>
+</body>
+</html>

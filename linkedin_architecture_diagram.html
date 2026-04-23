@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0f172a; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Segoe UI', sans-serif; }
+  .card { width: 760px; padding: 48px 40px; }
+  h2 { color: #e2e8f0; text-align: center; font-size: 22px; letter-spacing: 1px; margin-bottom: 48px; }
+  h2 span { color: #38bdf8; }
+  .flow { display: flex; align-items: center; justify-content: center; gap: 0; flex-wrap: nowrap; }
+  .box { background: #1e293b; border: 1.5px solid #334155; border-radius: 12px; padding: 18px 16px; text-align: center; min-width: 120px; }
+  .box .icon { font-size: 28px; margin-bottom: 8px; }
+  .box .label { color: #94a3b8; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .box .name { color: #e2e8f0; font-size: 13px; font-weight: 600; }
+  .box.input { border-color: #38bdf8; }
+  .box.filter { border-color: #f59e0b; }
+  .box.ai { border-color: #a78bfa; }
+  .box.approved { border-color: #22c55e; background: #052e16; }
+  .box.blocked { border-color: #ef4444; background: #1c0a0a; }
+  .arrow { color: #475569; font-size: 22px; padding: 0 6px; flex-shrink: 0; }
+  .outcomes { display: flex; flex-direction: column; gap: 12px; }
+  .sub { color: #64748b; font-size: 11px; margin-top: 4px; }
+  .divider { width: 760px; height: 1px; background: #1e293b; margin: 36px auto; }
+  .layers { display: flex; justify-content: center; gap: 32px; margin-top: 0; }
+  .layer { text-align: center; }
+  .layer .num { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; margin: 0 auto 8px; }
+  .layer .lname { color: #94a3b8; font-size: 12px; }
+  .l1 .num { background: #0c4a6e; color: #38bdf8; }
+  .l2 .num { background: #451a03; color: #f59e0b; }
+  .l3 .num { background: #2e1065; color: #a78bfa; }
+  .l4 .num { background: #052e16; color: #22c55e; }
+  footer { text-align: center; margin-top: 36px; color: #334155; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h2>AI-Powered <span>Content Moderation</span> Pipeline</h2>
+  <div class="flow">
+    <div class="box input">
+      <div class="icon">📝</div>
+      <div class="label">Input</div>
+      <div class="name">User Text</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="box">
+      <div class="icon">🔍</div>
+      <div class="label">Layer 1</div>
+      <div class="name">Empty Check</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="box filter">
+      <div class="icon">🚫</div>
+      <div class="label">Layer 2</div>
+      <div class="name">Word Filter</div>
+      <div class="sub">Banned + Political</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="box ai">
+      <div class="icon">🤖</div>
+      <div class="label">Layer 3</div>
+      <div class="name">DistilBERT</div>
+      <div class="sub">Toxicity AI</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="outcomes">
+      <div class="box approved">
+        <div class="name">✅ Approved</div>
+        <div class="sub">Clean content</div>
+      </div>
+      <div class="box blocked">
+        <div class="name">❌ Blocked</div>
+        <div class="sub">Toxic / Banned</div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="layers">
+    <div class="layer l1"><div class="num">1</div><div class="lname">Empty Check</div></div>
+    <div class="layer l2"><div class="num">2</div><div class="lname">Word Lists</div></div>
+    <div class="layer l3"><div class="num">3</div><div class="lname">DistilBERT AI</div></div>
+    <div class="layer l4"><div class="num">4</div><div class="lname">Decision</div></div>
+  </div>
+  <footer>Python · HuggingFace Transformers · PyTorch · scikit-learn</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1e1e1e; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Courier New', monospace; }
+  .window { width: 720px; border-radius: 10px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.8); }
+  .titlebar { background: #3c3c3c; padding: 10px 16px; display: flex; align-items: center; gap: 8px; }
+  .dot { width: 13px; height: 13px; border-radius: 50%; }
+  .red { background: #ff5f57; } .yellow { background: #febc2e; } .green { background: #28c840; }
+  .title { color: #aaa; font-size: 13px; margin-left: auto; margin-right: auto; }
+  .terminal { background: #0d0d0d; padding: 24px 28px; font-size: 14px; line-height: 2; }
+  .prompt { color: #4ec9b0; }
+  .cmd { color: #dcdcdc; }
+  .comment { color: #6a9955; }
+  .blocked { color: #f44747; font-weight: bold; }
+  .approved { color: #4ec9b0; font-weight: bold; }
+  .warn { color: #dcdcaa; }
+  .dim { color: #555; }
+  .label { color: #9cdcfe; }
+</style>
+</head>
+<body>
+<div class="window">
+  <div class="titlebar">
+    <div class="dot red"></div>
+    <div class="dot yellow"></div>
+    <div class="dot green"></div>
+    <span class="title">Terminal — content_moderation</span>
+  </div>
+  <div class="terminal">
+    <div><span class="dim"># ── Toxic Content ──────────────────────────</span></div>
+    <div><span class="prompt">❯ </span><span class="cmd">python main.py --text "You are an idiot and I hate you"</span></div>
+    <div><span class="blocked">❌ Blocked: contains toxic/impolite language</span></div>
+    <br>
+    <div><span class="dim"># ── Banned Word ─────────────────────────────</span></div>
+    <div><span class="prompt">❯ </span><span class="cmd">python main.py --text "This is absolute sh!t content"</span></div>
+    <div><span class="blocked">❌ Blocked: contains banned/political term - 'sh!t'</span></div>
+    <br>
+    <div><span class="dim"># ── Political Term ──────────────────────────</span></div>
+    <div><span class="prompt">❯ </span><span class="cmd">python main.py --text "Vote for the revolution now"</span></div>
+    <div><span class="blocked">❌ Blocked: contains banned/political term - 'vote'</span></div>
+    <br>
+    <div><span class="dim"># ── Clean Content ───────────────────────────</span></div>
+    <div><span class="prompt">❯ </span><span class="cmd">python main.py --text "Great work on the project today!"</span></div>
+    <div><span class="approved">✅ Approved: Clean content</span></div>
+    <br>
+    <div><span class="dim"># ── Empty Message ───────────────────────────</span></div>
+    <div><span class="prompt">❯ </span><span class="cmd">python main.py --text "   "</span></div>
+    <div><span class="blocked">❌ Blocked: Empty message</span></div>
+  </div>
+</div>
+</body>
+</html>
